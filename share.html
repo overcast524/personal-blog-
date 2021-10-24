@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>个人博客 </title>
+		<meta name="keywords" content="个人博客" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+		<link href="css/m.css" rel="stylesheet">
+
+		<script src="js/scrollReveal.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				<a href="/">个人博客</a>
+			</div>
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="index.html">网站首页</a>
+					</li>
+					<li>
+						<a href="share.html">我的相册</a>
+					</li>
+					<li>
+						<a href="about.html">关于我</a>
+					</li>
+					<li>
+						<a href="gbook.html">留言</a>
+					</li>
+					<li>
+						<a href="info.html">佳作欣赏</a>
+					</li>
+					<li>
+						<a href="infopic.html">内容页</a>
+					</li>
+				</ul>
+			</nav>
+			<script>
+				window.onload = function() {
+					var obj = null;
+					var As = document.getElementById('nav').getElementsByTagName('a');
+					obj = As[0];
+					for(i = 1; i < As.length; i++) {
+						if(window.location.href.indexOf(As[i].href) >= 0)
+							obj = As[i];
+					}
+					obj.id = 'selected'
+				}
+			</script>
+		</header>
+		<article>
+			<div class="picbox">
+				<ul>
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/b01.jpg"></i>
+							<div class="picinfo">
+								<h3>good morning</h3>
+								<span>这个世界是永远比你想的更精彩的。不要败给生活。趁你还有时间，尽你最大的努力，做成你最想做的那件事，成为你最想成为的那种人，过你最想过的那种生活。早安，2018！</span> </div>
+						</a>
+					</li>
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/t03.jpg"></i>
+							<div class="picinfo">
+								<h3>无题</h3>
+								<span>找不到什么词来形容这首吉他，反正就是很好听就是了</span> </div>
+						</a>
+					</li>
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/bg006.jpg"></i>
+							<div class="picinfo">
+								<h3>越人歌</h3>
+								<span>Mountains have wood, wood, branches, heart, happiness, and kings. 百度翻译翻译不出来。。</span> </div>
+						</a>
+					</li>
+
+				</ul>
+				<ul>
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/zd01.jpg"></i>
+							<div class="picinfo">
+								<h3>是不是就这么，散了</h3>
+								<span>别活在卑微里，越是卑微ta越是不当一回事，一步一步的践踏</span> </div>
+						</a>
+					</li>
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/bg002.jpg"></i>
+							<div class="picinfo">
+								<h3>かわいいひと </h3>
+								<span>你看我这么可爱，人见人爱花见花开，可惜就是刚好你不喜欢的样子，我有什么办法？</span> </div>
+						</a>
+					</li>
+
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/v1.jpg"></i>
+							<div class="picinfo">
+								<h3>Golden Sky</h3>
+								<span>某音乐平台的日推，不得不夸奖大数据的分析！生活就是一杯白开水，过于平淡总想找点不一样的，却又发现事实并不是如你所想</span> </div>
+						</a>
+					</li>
+
+				</ul>
+				<ul>
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/b02.jpg"></i>
+							<div class="picinfo">
+								<h3>New Soul</h3>
+								<span>I'm a young soul in this very strange world hoping
+										I could learn a bit about what is true and fake.</span> </div>
+						</a>
+					</li>
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/text02.jpg"></i>
+							<div class="picinfo">
+								<h3>TroubledYouth</h3>
+								<span>I don't want to wake, I don't want to sleep
+											I don't want to suffocate, I don't want to breathe
+											</span> </div>
+						</a>
+					</li>
+
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/bg005.jpg"></i>
+							<div class="picinfo">
+								<h3>东京杀人事件</h3>
+								<span>日推，感觉到了嘶叫声中的绝望，那种没有人感觉到的绝望，嘶叫声从左耳到右耳的感觉</span> </div>
+						</a>
+					</li>
+
+				</ul>
+				<ul>
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/abv.jpg"></i>
+							<div class="picinfo">
+								<h3>Never Mind</h3>
+								<span>你看每一次，你说对不起我都说没关系，像一个感觉不到疼的孩子，怎么会没关系呢？你怎么就那么的心安理得呢</span> </div>
+						</a>
+					</li>
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/bg033.jpg"></i>
+							<div class="picinfo">
+								<h3>Sorrow</h3>
+								<span>忽明忽暗的光线，摇摇欲坠的灯泡，石灰大块大块剥落的墙壁，遍地碎玻璃，窗台上放着一个烂苹果，一只瘦猫慢慢从房间走出去，床上躺着正在腐烂的尸体。</span> </div>
+						</a>
+					</li>
+
+					<li data-scroll-reveal="enter bottom over 1s">
+						<a href="/"><i><img src="images/bg004.jpg"></i>
+							<div class="picinfo">
+								<h3>Count the Ways </h3>
+								<span>最纯粹的爱情观，如若相爱，便携手到老；如若错过，便护ta安好。</span> </div>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="pagelist">
+				<a class="allpage"><b>99</b></a>&nbsp;&nbsp;
+				<a href="#" class="curPage">1</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(2)">2</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(3)">3</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(4)">4</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(5)">5</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(6)">6</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(7)">7</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(8)">8</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(9)">9</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(2)">下一页</a>
+			</div>
+		</article>
+		<footer>
+			<p>Design by
+				<a href="index.html" target="_blank">个人博客</a>
+			
+			</p>
+		</footer>
+		<script>
+			if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+				(function() {
+					window.scrollReveal = new scrollReveal({
+						reset: true
+					});
+				})();
+			};
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>个人博客</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/m.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<a href="/">个人博客</a>
+		</div>
+		<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html">网站首页</a>
+				</li>
+				<li>
+					<a href="share.html">我的相册</a>
+				</li>
+				<li>
+					<a href="about.html">关于我</a>
+				</li>
+				<li>
+					<a href="gbook.html">留言</a>
+				</li>
+				<li>
+					<a href="info.html">佳作欣赏</a>
+				</li>
+				<li>
+					<a href="infopic.html">内容页</a>
+				</li>
+			</ul>
+		</nav>
+		<script>
+			window.onload = function () {
+				var obj = null;
+				var As = document.getElementById('nav').getElementsByTagName('a');
+				obj = As[0];
+				for (i = 1; i < As.length; i++) {
+					if (window.location.href.indexOf(As[i].href) >= 0)
+						obj = As[i];
+				}
+				obj.id = 'selected'
+			}
+		</script>
+	</header>
+	<article>
+		<div class="l_box">
+			<div class="about_me">
+				<h2>关于我</h2>
+				<ul>
+					<i><img src="images/4.jpg"></i>
+					<p><b>Y X </b>
+					<p>天行健，君子以自强不息；地势坤，君子以厚德载物。</p>
+					</p>
+				</ul>
+			</div>
+			<div class="wdxc">
+				<h2>我的相册</h2>
+				<ul>
+					<li>
+						<a href="/"><img src="images/7.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/8.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/9.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/10.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/11.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/12.jpg"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="search">
+				<form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+					<input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词"
+						style="color: rgb(153, 153, 153);"
+						onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}"
+						onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+					<input name="show" value="title" type="hidden">
+					<input name="tempid" value="1" type="hidden">
+					<input name="tbname" value="news" type="hidden">
+					<input name="Submit" class="input_submit" value="搜索" type="submit">
+				</form>
+			</div>
+			<div class="fenlei">
+				<h2>文章分类</h2>
+				<ul>
+					<li>
+						<a href="/">学无止境（33）</a>
+					</li>
+					<li>
+						<a href="/">日记（19）</a>
+					</li>
+					<li>
+						<a href="/">慢生活（520）</a>
+					</li>
+					<li>
+						<a href="/">美文欣赏（40）</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tuijian">
+				<h2>个人推荐</h2>
+				<ul>
+					<li><a href="https://www.juzimi.com/ju/111009">你是什么人便会遇上什么人</a></li>
+					<li><a href="https://www.juzimi.com/ju/161381">爱情没有永远，地老天荒也走不完</a></li>
+					<li><a href="https://www.juzimi.com/ju/83019">人生若只如初见</a></li>
+					<li><a href="https://www.juzimi.com/ju/631640">绝色狂妃</a></li>
+					<li><a href="https://m.juzimi.com/ju/1080289">浮生物语</a></li>
+					<li><a href="https://www.juzimi.com/ju/343584">采桑子</a></li>
+					<li><a href="https://www.juzimi.com/ju/3082206">目送</a></li>
+					<li><a href="https://www.juzimi.com/ju/3082206">一禅小和尚</a></li>
+					<li><a href="https://www.duanwenxue.com/article/4779701.html"> 光只开痴情花，岁月怎负无情人</a></li>
+					<li><a href="https://www.juzimi.com/ju/449661">林清玄散文</a></li>
+
+				</ul>
+			</div>
+
+			<div class="guanzhu">
+				<h2>关注我 么么哒</h2>
+				<ul>
+					<img src="images/wx.jpg">
+				</ul>
+			</div>
+		</div>
+		<div class="r_box">
+			<li><i><a href="/"><img src="images/1.jpg"></a></i>
+				<h3><a href="/">你是什么人便会遇上什么人</a></h3>
+				<p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
+			</li>
+			<li><i><a href="/"><img src="images/2.jpg"></a></i>
+				<h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
+				<p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
+			</li>
+			<li><i><a href="/"><img src="images/3.jpg"></a></i>
+				<h3><a href="/">人生若只如初见</a></h3>
+				<p>烟花不会让人懂得，它化作的尘埃是怎样的温暖，他宁肯留下一地冰冷的幻象，一地破碎。如果你哀伤，你可以为他悼念，却无法改变它的坚持。</p>
+			</li>
+			<li><i><a href="/"><img src="images/4.jpg"></a></i>
+				<h3><a href="/">绝色狂妃</a></h3>
+				<p>浓云舒卷，编织出暮色苍茫。黄昏阳光透过纱窗，落了一地的锦瑟。华灯如菊花开遍空远的黄昏，蓦然间凭添了些许浪漫的斑斓缤纷。</p>
+			</li>
+			<li><i><a href="/"><img src="images/11.jpg"></a></i>
+				<h3><a href="/">浮生物语</a></h3>
+				<p>有些话，永远讲不出口；有些泪，永远流不出来 你将我自死神手中抢回来，现在，由我将你的泪抢回来 我从来都不对你哭，从来都让你以为我很快乐，那是因为世上没有人比我更了解，你永不褪去的笑容，都是流不出来的眼泪
+					我不想让你难过，而已</p>
+			</li>
+			<li><i><a href="/"><img src="images/5.jpg"></a></i>
+				<h3><a href="/">采桑子</a></h3>
+				<p>非关癖爱轻模样，冷处偏佳。别有根芽，不是人间富贵花。 谢娘别后谁能惜，飘泊天涯。寒月悲笳，万里西风瀚海沙。</p>
+			</li>
+			<li><i><a href="/"><img src="images/6.jpg"></a></i>
+				<h3><a href="/">目送</a></h3>
+				<p>总会有那么一个人 在某个风景正好的季节来到你身边 并且懂得你全部的好</p>
+			</li>
+			<li><i><a href="/"><img src="images/7.jpg"></a></i>
+				<h3><a href="/">一禅小和尚</a></h3>
+				<p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
+			</li>
+			<li><i><a href="/"><img src="images/8.jpg"></a></i>
+				<h3><a href="/">光只开痴情花，岁月怎负无情人</a></h3>
+				<p>一颗枝繁叶茂的大树总是引人注目的。那绿叶扶疏，暗香浮动的情致、是近或远，无论你远远地歇坐，还是去那里流连合影，这样的树可有清风自来，这样的树可为你遮风挡雨?</p>
+			</li>
+			<li><i><a href="/"><img src="images/9.jpg"></a></i>
+				<h3><a href="/">林清玄散文</a></h3>
+				<p>我对自己说：”跨过去，春天不远了，我永远不要失去发芽的心情。&quot;而我果然就不会被寒冬与剪枝击败。虽然有时静夜想想，也会黯然流下泪来，但那些泪水，在一个新的春天来临时，往往成为最好的肥料。</p>
+			</li>
+			<div class="pagelist">
+				<a class="allpage"><b>99</b></a>&nbsp;&nbsp;
+				<a href="#" class="curPage">1</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(2)">2</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(3)">3</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(4)">4</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(5)">5</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(6)">6</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(7)">7</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(8)">8</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(9)">9</a>&nbsp;&nbsp;
+				<a href="#" onclick="page(2)">下一页</a>
+			</div>
+		</div>
+	</article>
+	<footer>
+		<p>Design by
+			<a href="/" target="_blank">个人博客</a>
+
+		</p>
+	</footer>
+
+</body>
+
+</html>

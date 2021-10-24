@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>个人博客 </title>
+	<meta name="keywords" content="个人博客" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/info.css" rel="stylesheet">
+	<link href="css/m.css" rel="stylesheet">
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<a href="/">个人博客</a>
+		</div>
+		<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html">网站首页</a>
+				</li>
+				<li>
+					<a href="share.html">我的相册</a>
+				</li>
+				<li>
+					<a href="about.html">关于我</a>
+				</li>
+				<li>
+					<a href="gbook.html">留言</a>
+				</li>
+				<li>
+					<a href="info.html">佳作欣赏</a>
+				</li>
+				<li>
+					<a href="infopic.html">内容页</a>
+				</li>
+			</ul>
+		</nav>
+		<script>
+			window.onload = function () {
+				var obj = null;
+				var As = document.getElementById('nav').getElementsByTagName('a');
+				obj = As[0];
+				for (i = 1; i < As.length; i++) {
+					if (window.location.href.indexOf(As[i].href) >= 0)
+						obj = As[i];
+				}
+				obj.id = 'selected'
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function (e) {
+				t = $('.guanzhu').offset().top;
+				mh = $('.infosbox').height();
+				gh = $('.guanzhu').height();
+				$(window).scroll(function (e) {
+					s = $(document).scrollTop();
+					if (s > t - 10) {
+						$('.guanzhu').css('position', 'fixed');
+						if (s + gh > mh) {
+							$('.guanzhu').css('top', mh - s - gh + 'px');
+						}
+					} else {
+						$('.guanzhu').css('position', '');
+					}
+
+				})
+			});
+		</script>
+	</header>
+	<article>
+		<div class="l_box">
+			<div class="search">
+				<form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+					<input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词"
+						style="color: rgb(153, 153, 153);"
+						onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}"
+						onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+					<input name="show" value="title" type="hidden">
+					<input name="tempid" value="1" type="hidden">
+					<input name="tbname" value="news" type="hidden">
+					<input name="Submit" class="input_submit" value="搜索" type="submit">
+				</form>
+			</div>
+			<div class="fenlei">
+				<h2>文章分类</h2>
+				<ul>
+					<li>
+						<a href="/">学无止境（33）</a>
+					</li>
+					<li>
+						<a href="/">日记（19）</a>
+					</li>
+					<li>
+						<a href="/">慢生活（520）</a>
+					</li>
+					<li>
+						<a href="/">美文欣赏（40）</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tuijian">
+				<h2>个人推荐</h2>
+				<ul>
+					<li><a href="https://www.juzimi.com/ju/111009">你是什么人便会遇上什么人</a></li>
+					<li><a href="https://www.juzimi.com/ju/161381">爱情没有永远，地老天荒也走不完</a></li>
+					<li><a href="https://www.juzimi.com/ju/83019">人生若只如初见</a></li>
+					<li><a href="https://www.juzimi.com/ju/631640">绝色狂妃</a></li>
+					<li><a href="https://m.juzimi.com/ju/1080289">浮生物语</a></li>
+					<li><a href="https://www.juzimi.com/ju/343584">采桑子</a></li>
+					<li><a href="https://www.juzimi.com/ju/3082206">目送</a></li>
+					<li><a href="https://www.juzimi.com/ju/3082206">一禅小和尚</a></li>
+					<li><a href="https://www.duanwenxue.com/article/4779701.html"> 光只开痴情花，岁月怎负无情人</a></li>
+					<li><a href="https://www.juzimi.com/ju/449661">林清玄散文</a></li>
+				</ul>
+			</div>
+			<div class="tuijian">
+				<h2>点击排行</h2>
+				<ul>
+					<li><a href="https://www.juzimi.com/ju/111009">你是什么人便会遇上什么人</a></li>
+					<li><a href="https://www.juzimi.com/ju/161381">爱情没有永远，地老天荒也走不完</a></li>
+					<li><a href="https://www.juzimi.com/ju/83019">人生若只如初见</a></li>
+					<li><a href="https://www.juzimi.com/ju/631640">绝色狂妃</a></li>
+					<li><a href="https://m.juzimi.com/ju/1080289">浮生物语</a></li>
+					<li><a href="https://www.juzimi.com/ju/343584">采桑子</a></li>
+				</ul>
+			</div>
+			<div class="cloud">
+				<h2>标签云</h2>
+				<ul>
+					<a href="/">陌上花开</a>
+					<a href="/">校园生活</a>
+					<a href="/">html5</a>
+					<a href="/">SumSung</a>
+					<a href="/">青春</a>
+					<a href="/">温暖</a>
+					<a href="/">阳光</a>
+					<a href="/">华维荣耀</a>
+					<a href="/">索尼</a>
+				</ul>
+			</div>
+			<div class="guanzhu">
+				<h2>关注我 么么哒</h2>
+				<ul>
+					<img src="images/wx.jpg">
+				</ul>
+			</div>
+		</div>
+		<div class="infosbox">
+			<div class="newsview">
+				<h3 class="news_title">骆驼祥子</h3>
+				<div class="bloginfo">
+					<ul>
+						<li class="author">作者：
+							<a href="/">老舍</a>
+						</li>
+						<li class="lmname">
+							<a href="/">学无止境</a>
+						</li>
+						<li class="timer">时间：2018-11-17</li>
+						<li class="view">4567人已阅读</li>
+					</ul>
+				</div>
+				<div class="tags">
+					<a href="/" target="_blank">个人博客</a> &nbsp;
+					<a href="/" target="_blank">小世界</a>
+				</div>
+				<div class="news_about">
+					<strong>祥子</strong>十八岁，身材高大，年轻力壮的洋车夫。为全书灵魂人物。祥子是个个性格鲜明的普通车夫，在他身上具有劳动人民许多优良的品质。他善良纯朴，热爱劳动，对生活具有骆驼一般的积极性和坚韧的精神，但他也不讲理，满嘴谎话，好占便宜，还出卖人命。平常好像能忍受一切委屈，但在他的性格中也蕴藏有反抗的要求。他一贯要强和奋斗，不安于卑贱的社会地位。但祥子被旧社会摧残压迫，他的愿望一次又一次地被这个黑暗的社会所打破。祥子的悲惨生活深深揭露了旧中国的黑暗，反映了当时军阀混战、黑暗统治下的北京底层贫苦市民生活于痛苦深渊中的图景。
+				</div>
+				<div class="news_con">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;祥子的手哆嗦得更厉害了，揣起保单，拉起车，几乎要哭出来。拉到个僻静地方，细细端详自己的车，在漆板上试着照照自己的脸！越看越可爱，就是那不尽合自己的理想的地方也都可以原谅了，因为已经是自己的车了。把车看得似乎暂时可以休息会儿了，他坐在了水簸箕的新脚垫儿上，看着车把上的发亮的黄铜喇叭。他忽然想起来，今年是二十二岁。因为父母死得早，他忘了生日是在哪一天。自从到城里来，他没过一次生日。好吧，今天买上了新车，就算是生日吧，人的也是车的，好记，而且车既是自己的心血，简直没什么不可以把人与车算在一块的地方。
+					<br>
+					<br>
+					<img alt="" src="images/bi01.jpg"><br>
+					<br>
+					自从有了这辆车，他的生活过得越来越起劲了。拉包月也好，拉散座也好，他天天用不着为“车份儿”着急，拉多少钱全是自己的。心里舒服，对人就更和气，买卖也就更顺心。拉了半年，他的希望更大了：照这样下去，干上二年，至多二年，他就又可以买辆车，一辆，两辆……他也可以开车厂子了！
+					<br>
+					<br> 太阳西斜了，河上的老柳歪歪着，梢头挂着点金光。河水没有多少水，可是长着不少的绿藻，像一条油腻的长绿的带子，窄长，深绿，发出微腥的潮味。
+					<br>
+					<br>
+					<img alt="" src="images/bi02.jpg"><br>
+					<br>
+					风吹弯了路旁的树木，撕碎了店户的布幌，揭净了墙上的报单，遮昏了太阳，唱着，叫着，吼着，回荡着；忽然直弛，像惊狂了的大精灵，扯天扯地的疾走；忽然慌乱，四面八方的乱卷，像不知怎好而决定乱撞的恶魔；忽然横扫，乘其不备的袭击着地上的一切，扭折了树枝，吹掀了屋瓦，撞断了电线；可是，祥子在那里看着；他刚从风里出来，风并没能把他怎样了！
+					<br>
+					<br> 雨下给富人，也下给穷人；下给义人，也下给不义的人。其实雨并不公道，因为落在一个没有公道的世界上。
+					<br>
+					<br>夜深了，多日的疲乏，与逃走的惊惧，使他身心全不舒服。<br>
+					<br>
+
+					<br> &nbsp;
+				</div>
+			</div>
+			<div class="share">
+				<p class="diggit">
+					<a
+						href="JavaScript:makeRequest('/e/public/digg/?classid=3&amp;id=19&amp;dotop=1&amp;doajax=1&amp;ajaxarea=diggnum','EchoReturnedText','GET','');">
+						很赞哦！ </a>(<b id="diggnum">
+						<script type="text/javascript" src="/e/public/ViewClick/?classid=2&id=20&down=5"></script>13
+					</b>)
+				</p>
+			</div>
+			<div class="nextinfo">
+				<p>上一篇：
+					<a href="/news/life/2018-03-13/804.html">作为一个设计师,如果遭到质疑你是否能恪守自己的原则?</a>
+				</p>
+				<p>下一篇：
+					<a href="/news/life/">返回列表</a>
+				</p>
+			</div>
+			<div class="news_pl">
+				<h2>文章评论</h2>
+				<ul>
+					<div class="gbko"> </div>
+				</ul>
+			</div>
+		</div>
+	</article>
+	<footer>
+		<p>Design by
+			<a href="index.html" target="_blank">个人博客</a>
+
+		</p>
+	</footer>
+</body>
+
+</html>

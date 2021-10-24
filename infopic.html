@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>个人博客 </title>
+	<meta name="keywords" content="个人博客" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/infopic.css" rel="stylesheet">
+	<link href="css/m.css" rel="stylesheet">
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/piccontent.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<a href="/">个人博客</a>
+		</div>
+		<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html">网站首页</a>
+				</li>
+				<li>
+					<a href="share.html">我的相册</a>
+				</li>
+				<li>
+					<a href="about.html">关于我</a>
+				</li>
+				<li>
+					<a href="gbook.html">留言</a>
+				</li>
+				<li>
+					<a href="info.html">佳作欣赏</a>
+				</li>
+				<li>
+					<a href="infopic.html">内容页</a>
+				</li>
+			</ul>
+		</nav>
+		<script>
+			window.onload = function () {
+				var obj = null;
+				var As = document.getElementById('nav').getElementsByTagName('a');
+				obj = As[0];
+				for (i = 1; i < As.length; i++) {
+					if (window.location.href.indexOf(As[i].href) >= 0)
+						obj = As[i];
+				}
+				obj.id = 'selected'
+			}
+		</script>
+	</header>
+	<article>
+		<div class="l_box">
+			<div class="about_me">
+				<h2>关于我</h2>
+				<ul>
+					<i><img src="images/4.jpg"></i>
+					<p><b>Y X</b>
+					<p>天行健，君子以自强不息；地势坤，君子以厚德载物。</p>
+					</p>
+				</ul>
+			</div>
+			<div class="wdxc">
+				<h2>我的相册</h2>
+				<ul>
+					<li>
+						<a href="/"><img src="images/7.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/8.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/9.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/10.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/11.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/12.jpg"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="guanzhu">
+				<h2>关注我 么么哒</h2>
+				<ul>
+					<img src="images/wx.jpg">
+				</ul>
+			</div>
+		</div>
+		<div class="picsbox">
+			<div class="bodymodal"></div>
+			<!--播放到第一张图的提示-->
+			<div class="firsttop">
+				<div class="firsttop_right">
+					<div class="close2">
+						<a class="closebtn1" title="关闭" href="javascript:void(0)"></a>
+					</div>
+					<div class="replay">
+						<h2 id="div-end-h2"> 已到第一张图片了。 </h2>
+						<p>
+							<a class="replaybtn1" href="javascript:;">重新播放</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--播放到最后一张图的提示-->
+			<div class="endtop">
+				<div class="firsttop_right">
+					<div class="close2">
+						<a class="closebtn2" title="关闭" href="javascript:void(0)"></a>
+					</div>
+					<div class="replay">
+						<h2 id="H1"> 已到最后一张图片了。 </h2>
+						<p>
+							<a class="replaybtn2" href="javascript:;">重新播放</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--弹出层结束-->
+			<!--图片特效内容开始-->
+			<div class="piccontext">
+				<h2> Say Something Anyway </h2>
+				<div class="source">
+					<div class="source_left"><span>2018-11-17</span> </div>
+					<div class="source_right">
+						<a href="javascript:;" class="list">列表查看</a>
+					</div>
+					<div class="source_right1">
+						<a href="javascript:;" class="gaoqing">高清查看</a>
+					</div>
+				</div>
+				<!--大图展示-->
+				<div class="picshow">
+					<div class="picshowtop">
+						<a href="#"><img src="" alt="" id="pic1" curindex="0" /></a>
+						<a id="preArrow" href="javascript:void(0)" class="contextDiv" title="上一张"><span
+								id="preArrow_A"></span></a>
+						<a id="nextArrow" href="javascript:void(0)" class="contextDiv" title="下一张"><span
+								id="nextArrow_A"></span></a>
+					</div>
+					<div class="picshowtxt">
+						<div class="picshowtxt_left"><span>1</span>/<i>12</i></div>
+						<div class="picshowtxt_right"></div>
+					</div>
+					<div class="picshowlist">
+						<div class="picshowlist_mid">
+							<div class="picmidleft">
+								<a href="javascript:void(0)" id="preArrow_B"><span class="sleft"></span></a>
+							</div>
+							<div class="picmidmid">
+								<ul>
+									<li>
+										<a href="javascript:void(0);"><img src="images/1.jpg" alt=""
+												bigimg="images/1.jpg" text="樱花飘下的季节，我们分开的季节" /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/2.jpg" alt=""
+												bigimg="images/2.jpg"
+												text="你是我患得患失的梦，我是你可有可无的人。 毕竟这穿越山河的箭，刺的都是用情至疾的人。" /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/3.jpg" alt=""
+												bigimg="images/3.jpg"
+												text="到头来，我不是孙悟空，也不是至尊宝，终究成了城墙下的那群人，看着别人的爱情，咀嚼自己的青春 " /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/4.jpg" alt=""
+												bigimg="images/4.jpg" text="你剥开一个很酸的橘子而感到后悔了 可对于橘子来说 那是它的一切 " /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/5.jpg" alt=""
+												bigimg="images/5.jpg" text="你不懂那种看你一眼就会笑的人是有多么的喜欢你 " /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/6.jpg" alt=""
+												bigimg="images/6.jpg"
+												text="“睡眠的拼音是什么”“shuimian”“失眠的拼音是什么”“shimian”“它们有什么区别”“你会懂的” " /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/7.jpg" alt=""
+												bigimg="images/7.jpg" text="所谓骑士总能救出公主，是因为恶龙从没有伤害过她 " /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/8.jpg" alt=""
+												bigimg="images/8.jpg" text="你说自杀的人是想不通还是想通了 " /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/9.jpg" alt=""
+												bigimg="images/9.jpg"
+												text="愿你是渣的那一方 背负所有骂名愉快生活 而不是在深夜痛哭 辗转反侧茶饭不思 做一个痛苦的好人 " /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/10.jpg" alt=""
+												bigimg="images/10.jpg" text="真正的离开是不会有任何预警的 但凡吃醋 冷战 威胁的潜台词都是留下我 " /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/11.jpg" alt=""
+												bigimg="images/11.jpg" text="你那么善解人意，想必没有人爱你。" /></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><img src="images/12.jpg" alt=""
+												bigimg="images/12.jpg" text="只愿你平安喜乐，愿我们今生，天涯永不再相见。-《Dear john》" /></a>
+									</li>
+								</ul>
+							</div>
+							<div class="picmidright">
+								<a href="javascript:void(0)" id="nextArrow_B"><span class="sright"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--列表展示-->
+				<div class="piclistshow">
+					<ul>
+						<li>
+							<div class="picimg"><img src="images/1.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3>樱花飘下的季节，我们分开的季节<span>(1/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/2.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3>你是我患得患失的梦，我是你可有可无的人。 毕竟这穿越山河的箭，刺的都是用情至疾的人。span>(2/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/3.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3>到头来，我不是孙悟空，也不是至尊宝，终究成了城墙下的那群人，看着别人的爱情，咀嚼自己的青春 <span>(3/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/4.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3>你剥开一个很酸的橘子而感到后悔了 可对于橘子来说 那是它的一切 <span>(4/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/5.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3>你不懂那种看你一眼就会笑的人是有多么的喜欢你 <span>(5/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/6.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3>“睡眠的拼音是什么”“shuimian”“失眠的拼音是什么”“shimian”“它们有什么区别”“你会懂的” <span>(6/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/7.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3>所谓骑士总能救出公主，是因为恶龙从没有伤害过她 <span>(7/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/8.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3>你说自杀的人是想不通还是想通了 <span>(8/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/9.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3>愿你是渣的那一方 背负所有骂名愉快生活 而不是在深夜痛哭 辗转反侧茶饭不思 做一个痛苦的好人 <span>(9/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/10.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3> "真正的离开是不会有任何预警的 但凡吃醋 冷战 威胁的潜台词都是留下我 " <span>(10/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/11.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3> 你那么善解人意，想必没有人爱你。<span>(11/12)</span></h3>
+							</div>
+						</li>
+						<li>
+							<div class="picimg"><img src="images/12.jpg" alt="" /></div>
+							<div class="pictxt">
+								<h3> 只愿你平安喜乐，愿我们今生，天涯永不再相见。-《Dear john》<span>(12/12)</span></h3>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pictext">
+				<ul>
+					女孩子，不需要多么艳丽的外表，简单，干净，温暖，如此甚好。记住你是女孩，你得为自己漂亮地活着。不迷茫，不依附，有自尊，独立，就是每个人最大的精彩。没有公主命，那就必须有一颗女皇的心
+				</ul>
+			</div>
+			<div class="share">
+				<p class="diggit">
+					<a
+						href="JavaScript:makeRequest('/e/public/digg/?classid=3&amp;id=19&amp;dotop=1&amp;doajax=1&amp;ajaxarea=diggnum','EchoReturnedText','GET','');">
+						很赞哦！ </a>(<b id="diggnum">
+						<script type="text/javascript" src="/e/public/ViewClick/?classid=2&id=20&down=5"></script>13
+					</b>)
+				</p>
+			</div>
+		</div>
+	</article>
+	<footer>
+		<p>Design by
+			<a href="index.html" target="_blank">个人博客</a>
+
+		</p>
+	</footer>
+</body>
+
+</html>

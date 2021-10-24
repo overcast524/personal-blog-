@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>个人博客</title>
+	<meta name="keywords" content="个人博客" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/m.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<a href="/">个人博客</a>
+		</div>
+		<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html">网站首页</a>
+				</li>
+				<li>
+					<a href="share.html">我的相册</a>
+				</li>
+				<li>
+					<a href="about.html">关于我</a>
+				</li>
+				<li>
+					<a href="gbook.html">留言</a>
+				</li>
+				<li>
+					<a href="info.html">佳作欣赏</a>
+				</li>
+				<li>
+					<a href="infopic.html">内容页</a>
+				</li>
+			</ul>
+		</nav>
+		<script>
+			window.onload = function () {
+				var obj = null;
+				var As = document.getElementById('nav').getElementsByTagName('a');
+				obj = As[0];
+				for (i = 1; i < As.length; i++) {
+					if (window.location.href.indexOf(As[i].href) >= 0)
+						obj = As[i];
+				}
+				obj.id = 'selected'
+			}
+		</script>
+	</header>
+	<article>
+		<div class="l_box">
+			<div class="about_me">
+				<h2>关于我</h2>
+				<ul>
+					<i><img src="images/4.jpg"></i>
+					<p><b>Y X </b>
+					<p>天行健，君子以自强不息；地势坤，君子以厚德载物。</p>
+					</p>
+				</ul>
+			</div>
+			<div class="wdxc">
+				<h2>我的相册</h2>
+				<ul>
+					<li>
+						<a href="/"><img src="images/7.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/8.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/9.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/10.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/11.jpg"></a>
+					</li>
+					<li>
+						<a href="/"><img src="images/12.jpg"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="guanzhu">
+				<h2>关注我 么么哒</h2>
+				<ul>
+					<img src="images/wx.jpg">
+				</ul>
+			</div>
+		</div>
+		<div class="r_box">
+			<ul class="about">
+				<p> y x<br />
+					<br />
+				<p style="color:#9370DB;"> A rainbow wouldn&#039;t be a rainbow if it lost one of its colors. Don&#039;t
+					lose anything about you. You&#039;re beautiful in your way.</p><br />
+				若缺了一色，彩虹也不足称其为彩虹。有关自己的一丁儿点都不要舍去。你自有你的美丽。&rdquo;。
+				<br />
+				<br />
+				<img src="images/8.jpg" style="margin-left: 55px;">
+				<p style="color: #0000CD;"> 焰火只有冲上去并散发开来，才是最美丽的。</p>It is only the most beautiful when fireworks are
+				washed up and distributed.<br />
+				<br />
+				<p style="color:	#98FB98 ;"> 任何高处，未有人间所不能达者。然而欲达目的，则不可不以决心和自信为之。</p>There is no place on earth that is
+				impossible to reach. However, to achieve the purpose, we must not be determined and confident.
+				<br />
+				<br />
+				<p style="color:	#00FFFF ;">攀登上一个阶梯，这固然很好，只要还有力气，那就意味着必须再继续前进一步。</p>It's good to climb up the ladder,
+				but if you have the strength, it means you have to move on.
+			</ul>
+		</div>
+	</article>
+	<footer>
+		<p>Design by
+			<a href="index.html" target="_blank">个人博客</a>
+
+		</p>
+	</footer>
+
+</body>
+
+</html>

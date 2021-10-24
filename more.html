@@ -1,0 +1,68 @@
+<div class="loading">
+    <div class="hidden">
+        <div class="horisontalpadding">
+            <ul class="products product-thumb-info-list">
+
+
+                <c:forEach var="company" items="${companys}">
+                    <li class="product searchproduct" style="width: 30%;"><a <div
+                            style="width: 350px; height: 30px; border: 3px solid #CCC; text-align: center; border-radius: 40                                                   px;">
+                            <h4 class="company.name" style="color: #030303">${company.name}</h4>
+        </div>
+        </a></li>
+        </c:forEach>
+        </ul>
+    </div>
+</div>
+<ul class="list">
+</ul>
+<div class="space30"></div>
+<div style="display: none;" data-bind="visible: isProductsLoading">
+    <div id="pager_loading"></div>
+</div>
+<div class="container">
+    <div class="alert alert-info text-center">
+        <a href="javascript:;" onClick="loading.loadMore();">
+            <div class="more">abcl</div>
+        </a>
+    </div>
+</div>
+</div>
+
+
+<script>
+    var _content = []; //��ʱ�洢liѭ������
+    var loading = {
+        _default: 6, //Ĭ����ʾͼƬ����
+        _loading: 6, //ÿ�ε����ť����صĸ���
+        init: function () {
+            var lis = $(".loading .hidden li");
+            $(".loading ul.list").html("");
+            for (var n = 0; n < loading._default; n++) {
+                lis.eq(n).appendTo(".loading ul.list");
+            }
+            $(".loading ul.list img").each(function () {
+                $(this).attr('src', $(this).attr('realSrc'));
+            })
+            for (var i = loading._default; i < lis.length; i++) {
+                _content.push(lis.eq(i));
+            }
+            $(".loading .hidden").html("");
+        },
+        loadMore: function () {
+            var mLis = $(".loading ul.list li").length;
+            for (var i = 0; i < loading._loading; i++) {
+                var target = _content.shift();
+                if (!target) {
+                    $('.loading .more').html("<p>abc</p>");
+                    break;
+                }
+                $(".loading ul.list").append(target);
+                $(".loading ul.list img").eq(mLis + i).each(function () {
+                    $(this).attr('src', $(this).attr('realSrc'));
+                });
+            }
+        }
+    }
+    loading.init();
+</script>
